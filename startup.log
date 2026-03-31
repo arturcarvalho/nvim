@@ -1,0 +1,184 @@
+--- Startup times for process: Primary (or UI client) ---
+
+times in msec
+ clock   self+sourced   self:  sourced script
+ clock   elapsed:              other lines
+
+000.000  000.000: --- NVIM STARTING ---
+000.061  000.061: event init
+000.702  000.641: early init
+002.315  001.613: locale set
+002.344  000.029: init first window
+003.422  001.078: inits 1
+003.429  000.007: window checked
+003.432  000.003: parsing arguments
+004.174  000.037  000.037: require('vim._core.shared')
+004.237  000.005  000.005: require('string.buffer')
+004.258  000.039  000.034: require('vim.inspect')
+004.298  000.033  000.033: require('vim._core.options')
+004.300  000.124  000.052: require('vim._core.editor')
+004.329  000.028  000.028: require('vim._core.system')
+004.330  000.219  000.031: require('vim._init_packages')
+004.332  000.680: init lua interpreter
+033.055  028.724: nvim_ui_attach
+033.282  000.226: nvim_set_client_info
+033.282  000.001: --- NVIM STARTED ---
+
+--- Startup times for process: Embedded ---
+
+times in msec
+ clock   self+sourced   self:  sourced script
+ clock   elapsed:              other lines
+
+000.000  000.000: --- NVIM STARTING ---
+000.076  000.076: event init
+000.218  000.143: early init
+000.647  000.428: locale set
+000.671  000.025: init first window
+002.999  002.327: inits 1
+003.012  000.013: window checked
+003.015  000.003: parsing arguments
+003.439  000.034  000.034: require('vim._core.shared')
+003.495  000.004  000.004: require('string.buffer')
+003.513  000.034  000.030: require('vim.inspect')
+003.550  000.030  000.030: require('vim._core.options')
+003.551  000.110  000.045: require('vim._core.editor')
+003.577  000.025  000.025: require('vim._core.system')
+003.578  000.194  000.027: require('vim._init_packages')
+003.580  000.371: init lua interpreter
+008.717  005.137: expanding arguments
+008.733  000.017: inits 2
+008.919  000.186: init highlight
+008.920  000.001: waiting for UI
+013.813  004.893: done waiting for UI
+013.818  000.005: clear screen
+013.928  000.009  000.009: require('vim.keymap')
+014.622  000.108  000.108: sourcing nvim_exec2()
+014.643  000.003  000.003: require('vim._core.log')
+029.052  015.229  015.108: require('vim._core.defaults')
+029.054  000.007: init default mappings & autocommands
+030.687  000.450  000.450: sourcing /opt/homebrew/Cellar/neovim/0.12.0/share/nvim/runtime/ftplugin.vim
+031.014  000.241  000.241: sourcing /opt/homebrew/Cellar/neovim/0.12.0/share/nvim/runtime/indent.vim
+033.530  000.363  000.363: require('vim._async')
+034.039  000.506  000.506: require('vim.version')
+034.088  002.407  001.539: require('vim.pack')
+034.135  000.022  000.022: require('vim.fs')
+034.453  000.003  000.003: require('vim.F')
+039.035  000.360  000.360: require('tokyonight.config')
+039.038  000.898  000.538: require('tokyonight')
+039.292  000.242  000.242: require('tokyonight.theme')
+040.233  000.533  000.533: require('tokyonight.util')
+040.236  000.878  000.345: require('tokyonight.colors')
+041.091  000.517  000.517: require('tokyonight.hsluv')
+041.753  000.468  000.468: require('tokyonight.groups')
+043.896  005.953  002.949: sourcing /Users/artur.carvalho/.local/share/nvim/site/pack/core/opt/tokyonight.nvim/colors/tokyonight.lua
+044.487  000.572  000.572: require('blink.cmp')
+045.269  000.340  000.340: require('blink.cmp.config.utils')
+045.541  000.270  000.270: require('blink.cmp.config.keymap')
+046.049  000.207  000.207: require('blink.cmp.config.completion.keyword')
+046.280  000.230  000.230: require('blink.cmp.config.completion.trigger')
+046.445  000.164  000.164: require('blink.cmp.config.completion.list')
+046.782  000.335  000.335: require('blink.cmp.config.completion.accept')
+047.045  000.263  000.263: require('blink.cmp.config.completion.menu')
+047.349  000.303  000.303: require('blink.cmp.config.completion.documentation')
+047.564  000.213  000.213: require('blink.cmp.config.completion.ghost_text')
+047.565  002.023  000.307: require('blink.cmp.config.completion')
+047.918  000.352  000.352: require('blink.cmp.config.fuzzy')
+048.216  000.297  000.297: require('blink.cmp.config.sources')
+048.491  000.274  000.274: require('blink.cmp.config.signature')
+048.709  000.218  000.218: require('blink.cmp.config.snippets')
+048.922  000.212  000.212: require('blink.cmp.config.appearance')
+049.139  000.216  000.216: require('blink.cmp.config.modes.cmdline')
+049.312  000.172  000.172: require('blink.cmp.config.modes.term')
+049.313  004.821  000.447: require('blink.cmp.config')
+050.431  000.155  000.155: require('blink.cmp.config.modes.types')
+051.399  000.436  000.436: require('blink.cmp.lib.async')
+052.246  000.415  000.415: require('blink.cmp.lib.utils')
+052.516  000.269  000.269: require('blink.cmp.fuzzy.download.system')
+052.535  000.987  000.304: require('blink.cmp.fuzzy.download.files')
+052.536  001.136  000.149: require('blink.cmp.fuzzy.download.git')
+052.540  001.975  000.403: require('blink.cmp.fuzzy.download')
+057.463  001.250  001.250: require('mini.pairs')
+061.585  000.370  000.370: require('vim.func')
+061.830  000.221  000.221: require('vim.func._memoize')
+061.843  001.821  001.231: require('fzf-lua.utils')
+062.724  000.350  000.350: require('fzf-lua.lib.base64')
+063.140  000.414  000.414: require('fzf-lua.lib.serpent')
+063.144  001.300  000.536: require('fzf-lua.libuv')
+063.150  004.066  000.944: require('fzf-lua.path')
+065.390  001.066  001.066: require('fzf-lua.actions')
+066.072  000.260  000.260: require('fzf-lua.class')
+066.084  000.688  000.428: require('fzf-lua.devicons')
+068.041  000.412  000.412: require('fzf-lua.previewer')
+068.395  002.308  001.896: require('fzf-lua.defaults')
+068.402  005.249  001.188: require('fzf-lua.config')
+068.848  000.306  000.306: sourcing /Users/artur.carvalho/.local/share/nvim/site/pack/core/opt/fzf-lua/autoload/fzf_lua.vim
+068.857  000.405  000.099: sourcing nvim_exec2() called at /Users/artur.carvalho/.config/nvim/init.lua:0
+071.035  001.379  001.379: require('fzf-lua.win')
+072.580  000.394  000.394: require('fzf-lua.fzf')
+073.374  000.790  000.790: require('fzf-lua.shell')
+073.382  002.345  001.161: require('fzf-lua.core')
+073.951  000.565  000.565: require('fzf-lua.make_entry')
+073.956  015.948  001.941: require('fzf-lua')
+078.381  001.050  001.050: require('vim.lsp.protocol')
+078.422  001.534  000.484: require('vim.lsp.log')
+079.514  001.090  001.090: require('vim.lsp.util')
+080.326  000.360  000.360: require('vim.lsp.sync')
+080.330  000.814  000.454: require('vim.lsp._changetracking')
+081.198  000.417  000.417: require('vim.lsp._transport')
+081.203  000.004  000.004: require('vim._core.stringbuffer')
+081.230  000.898  000.477: require('vim.lsp.rpc')
+081.256  005.616  001.280: require('vim.lsp')
+082.104  000.266  000.266: require('blink.cmp.lib.event_emitter')
+082.107  000.849  000.583: require('blink.cmp.sources.lib')
+083.810  052.667  013.096: sourcing /Users/artur.carvalho/.config/nvim/init.lua
+083.821  001.408: sourcing vimrc file(s)
+084.738  000.133  000.133: sourcing /Applications/Ghostty.app/Contents/Resources/ghostty/../nvim/site/ftdetect/ghostty.vim
+084.751  000.489  000.356: sourcing nvim_exec2() called at /opt/homebrew/Cellar/neovim/0.12.0/share/nvim/runtime/filetype.lua:0
+084.752  000.835  000.346: sourcing /opt/homebrew/Cellar/neovim/0.12.0/share/nvim/runtime/filetype.lua
+085.205  000.134  000.134: sourcing /opt/homebrew/Cellar/neovim/0.12.0/share/nvim/runtime/syntax/synload.vim
+085.260  000.454  000.320: sourcing /opt/homebrew/Cellar/neovim/0.12.0/share/nvim/runtime/syntax/syntax.vim
+088.209  000.154  000.154: sourcing /Users/artur.carvalho/.local/share/nvim/site/pack/core/opt/fzf-lua/plugin/fzf-lua.lua
+091.266  000.272  000.272: require('vim.treesitter.language')
+091.591  000.323  000.323: require('vim.treesitter._range')
+091.612  001.121  000.526: require('vim.treesitter.query')
+091.621  002.054  000.932: require('vim.treesitter.languagetree')
+091.625  002.578  000.524: require('vim.treesitter')
+091.678  002.828  000.251: sourcing /Users/artur.carvalho/.local/share/nvim/site/pack/core/opt/nvim-treesitter/plugin/filetypes.lua
+091.836  000.105  000.105: sourcing /Users/artur.carvalho/.local/share/nvim/site/pack/core/opt/nvim-treesitter/plugin/nvim-treesitter.lua
+091.985  000.102  000.102: sourcing /Users/artur.carvalho/.local/share/nvim/site/pack/core/opt/nvim-treesitter/plugin/query_predicates.lua
+092.647  000.297  000.297: sourcing /Users/artur.carvalho/.local/share/nvim/site/pack/core/opt/blink.cmp/plugin/blink-cmp.lua
+093.322  000.272  000.272: sourcing /Users/artur.carvalho/.local/share/nvim/site/pack/core/opt/nvim-lspconfig/plugin/lspconfig.lua
+094.454  000.206  000.206: sourcing /opt/homebrew/Cellar/neovim/0.12.0/share/nvim/runtime/plugin/gzip.vim
+096.053  000.499  000.499: sourcing /opt/homebrew/Cellar/neovim/0.12.0/share/nvim/runtime/pack/dist/opt/matchit/plugin/matchit.vim
+096.094  001.597  001.099: sourcing /opt/homebrew/Cellar/neovim/0.12.0/share/nvim/runtime/plugin/matchit.vim
+096.411  000.273  000.273: sourcing /opt/homebrew/Cellar/neovim/0.12.0/share/nvim/runtime/plugin/matchparen.vim
+097.626  000.303  000.303: sourcing /opt/homebrew/Cellar/neovim/0.12.0/share/nvim/runtime/pack/dist/opt/netrw/plugin/netrwPlugin.vim
+097.706  001.247  000.944: sourcing /opt/homebrew/Cellar/neovim/0.12.0/share/nvim/runtime/plugin/netrwPlugin.vim
+098.058  000.301  000.301: sourcing /opt/homebrew/Cellar/neovim/0.12.0/share/nvim/runtime/plugin/rplugin.vim
+098.290  000.172  000.172: sourcing /opt/homebrew/Cellar/neovim/0.12.0/share/nvim/runtime/plugin/tarPlugin.vim
+098.419  000.079  000.079: sourcing /opt/homebrew/Cellar/neovim/0.12.0/share/nvim/runtime/plugin/tutor.vim
+098.780  000.313  000.313: sourcing /opt/homebrew/Cellar/neovim/0.12.0/share/nvim/runtime/plugin/zipPlugin.vim
+098.896  000.064  000.064: sourcing /opt/homebrew/Cellar/neovim/0.12.0/share/nvim/runtime/plugin/editorconfig.lua
+099.012  000.066  000.066: sourcing /opt/homebrew/Cellar/neovim/0.12.0/share/nvim/runtime/plugin/man.lua
+099.143  000.084  000.084: sourcing /opt/homebrew/Cellar/neovim/0.12.0/share/nvim/runtime/plugin/net.lua
+099.272  000.083  000.083: sourcing /opt/homebrew/Cellar/neovim/0.12.0/share/nvim/runtime/plugin/osc52.lua
+099.415  000.095  000.095: sourcing /opt/homebrew/Cellar/neovim/0.12.0/share/nvim/runtime/plugin/shada.lua
+099.519  000.053  000.053: sourcing /opt/homebrew/Cellar/neovim/0.12.0/share/nvim/runtime/plugin/spellfile.lua
+099.542  006.039: loading rtp plugins
+099.792  000.250: loading packages
+099.794  000.001: loading after plugins
+099.802  000.008: inits 3
+101.446  001.644: reading ShaDa
+101.501  000.055: opening buffers
+101.515  000.014: BufEnter autocommands
+101.516  000.001: editing files in windows
+102.010  000.454  000.454: require('nvim-treesitter.config')
+102.584  000.613: VimEnter autocommands
+102.602  000.018: UIEnter autocommands
+103.150  000.451  000.451: sourcing /opt/homebrew/Cellar/neovim/0.12.0/share/nvim/runtime/autoload/provider/clipboard.vim
+103.159  000.106: before starting main loop
+103.295  000.019  000.019: require('vim._core.util')
+103.402  000.224: first screen update
+103.403  000.001: --- NVIM STARTED ---
+

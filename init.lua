@@ -125,6 +125,21 @@ vim.lsp.enable({ 'ts_ls', 'gopls', 'rust_analyzer', 'pyright', 'r_language_serve
 --------------------------------------------------------------------------------
 local map = vim.keymap.set
 
+-- General
+map({ 'n', 'i' }, '<D-s>', '<cmd>w<cr>', { desc = 'Save' })
+map('n', '<D-/>', 'gcc', { remap = true, desc = 'Toggle comment' })
+map('v', '<D-/>', 'gc', { remap = true, desc = 'Toggle comment' })
+
+-- Move lines
+map('n', '<A-j>', '<cmd>m .+1<cr>==', { desc = 'Move line down' })
+map('n', '<A-k>', '<cmd>m .-2<cr>==', { desc = 'Move line up' })
+map('n', '<A-Down>', '<cmd>m .+1<cr>==', { desc = 'Move line down' })
+map('n', '<A-Up>', '<cmd>m .-2<cr>==', { desc = 'Move line up' })
+map('v', '<A-j>', ":m '>+1<cr>gv=gv", { desc = 'Move selection down' })
+map('v', '<A-k>', ":m '<-2<cr>gv=gv", { desc = 'Move selection up' })
+map('v', '<A-Down>', ":m '>+1<cr>gv=gv", { desc = 'Move selection down' })
+map('v', '<A-Up>', ":m '<-2<cr>gv=gv", { desc = 'Move selection up' })
+
 -- Fuzzy finder
 map('n', '<leader>ff', '<cmd>FzfLua files<cr>', { desc = 'Find files' })
 map('n', '<leader>fg', '<cmd>FzfLua live_grep<cr>', { desc = 'Live grep' })
