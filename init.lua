@@ -20,6 +20,9 @@ o.splitright = true
 o.splitbelow = true
 o.scrolloff = 8
 o.cursorline = true
+o.foldmethod = 'expr'
+o.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
+o.foldlevel = 99
 
 --------------------------------------------------------------------------------
 -- Plugins (vim.pak)
@@ -50,6 +53,7 @@ vim.pack.add({
   gh('ibhagwan/fzf-lua'),
   gh('folke/tokyonight.nvim'),
   gh('echasnovski/mini.pairs'),
+  gh('echasnovski/mini.surround'),
 })
 
 --------------------------------------------------------------------------------
@@ -104,6 +108,7 @@ end
 -- Autopairs
 --------------------------------------------------------------------------------
 require('mini.pairs').setup()
+require('mini.surround').setup()
 
 --------------------------------------------------------------------------------
 -- Fuzzy finder
@@ -129,6 +134,7 @@ local map = vim.keymap.set
 map({ 'n', 'i' }, '<D-s>', '<cmd>w<cr>', { desc = 'Save' })
 map('n', '<D-/>', 'gcc', { remap = true, desc = 'Toggle comment' })
 map('v', '<D-/>', 'gc', { remap = true, desc = 'Toggle comment' })
+map('n', '<D-S-o>', '<cmd>FzfLua grep_curbuf query=^#<cr>', { desc = 'Jump to heading' })
 
 -- Move lines
 map('n', '<A-j>', '<cmd>m .+1<cr>==', { desc = 'Move line down' })
