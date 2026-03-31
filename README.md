@@ -12,6 +12,7 @@ Neovim 0.12 with vim.pak. Leader key is `<space>`.
 - mini.pairs (autopairs)
 - mini.surround (add/delete/change surrounds)
 - which-key.nvim (shows available keybindings on pause)
+- multicursor.nvim (multiple cursors)
 
 ## Keymaps
 
@@ -67,7 +68,22 @@ Neovim 0.12 with vim.pak. Leader key is `<space>`.
 
 Works with any character: `"`, `'`, `` ` ``, `(`, `{`, `[`, `<`, tags, etc.
 
+### Multicursor
 
+
+Select with visual, then <leader> n. `i` to insert, and then press `Esc` to save. Very confusing hmmm
+
+| Key | Action |
+|-----|--------|
+| `Up` | Add cursor above |
+| `Down` | Add cursor below |
+| `<leader>n` | Add cursor on next match |
+| `<leader>N` | Add cursor on prev match |
+| `<leader>A` | Add cursor on all matches |
+| `Ctrl+click` | Add/remove cursor with mouse |
+| `Left/Right` | Navigate between cursors (when active) |
+| `<leader>x` | Delete current cursor (when active) |
+| `Esc` | Clear all cursors |
 
 ### Folding (built-in)
 

@@ -55,6 +55,7 @@ vim.pack.add({
   gh('echasnovski/mini.pairs'),
   gh('echasnovski/mini.surround'),
   gh('folke/which-key.nvim'),
+  { src = gh('jake-stewart/multicursor.nvim'), version = '1.0' },
 })
 
 --------------------------------------------------------------------------------
@@ -112,6 +113,34 @@ require('mini.pairs').setup()
 require('mini.surround').setup()
 require('which-key').setup()
 
+local map = vim.keymap.set
+
+--------------------------------------------------------------------------------
+-- Multicursor
+--------------------------------------------------------------------------------
+local mc = require('multicursor-nvim')
+mc.setup()
+
+map({ 'n', 'x' }, '<up>', function() mc.lineAddCursor(-1) end, { desc = 'Add cursor above' })
+map({ 'n', 'x' }, '<down>', function() mc.lineAddCursor(1) end, { desc = 'Add cursor below' })
+map({ 'n', 'x' }, '<leader>n', function() mc.matchAddCursor(1) end, { desc = 'Add cursor on next match' })
+map({ 'n', 'x' }, '<leader>N', function() mc.matchAddCursor(-1) end, { desc = 'Add cursor on prev match' })
+map({ 'n', 'x' }, '<leader>A', mc.matchAllAddCursors, { desc = 'Add cursor on all matches' })
+map('n', '<c-leftmouse>', mc.handleMouse, { desc = 'Add cursor with click' })
+
+mc.addKeymapLayer(function(layerSet)
+  layerSet({ 'n', 'x' }, '<left>', mc.prevCursor)
+  layerSet({ 'n', 'x' }, '<right>', mc.nextCursor)
+  layerSet({ 'n', 'x' }, '<leader>x', mc.deleteCursor)
+  layerSet('n', '<esc>', function()
+    if not mc.cursorsEnabled() then
+      mc.enableCursors()
+    else
+      mc.clearCursors()
+    end
+  end)
+end)
+
 --------------------------------------------------------------------------------
 -- Fuzzy finder
 --------------------------------------------------------------------------------
@@ -130,7 +159,6 @@ vim.lsp.enable({ 'ts_ls', 'gopls', 'rust_analyzer', 'pyright', 'r_language_serve
 --------------------------------------------------------------------------------
 -- Keymaps
 --------------------------------------------------------------------------------
-local map = vim.keymap.set
 
 -- General
 map({ 'n', 'i' }, '<D-s>', '<cmd>w<cr>', { desc = 'Save' })
