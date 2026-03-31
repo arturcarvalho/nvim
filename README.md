@@ -11,6 +11,7 @@ Neovim 0.12 with vim.pak. Leader key is `<space>`.
 - tokyonight.nvim (colorscheme)
 - mini.pairs (autopairs)
 - mini.surround (add/delete/change surrounds)
+- which-key.nvim (shows available keybindings on pause)
 
 ## Keymaps
 
@@ -66,6 +67,8 @@ Neovim 0.12 with vim.pak. Leader key is `<space>`.
 
 Works with any character: `"`, `'`, `` ` ``, `(`, `{`, `[`, `<`, tags, etc.
 
+
+
 ### Folding (built-in)
 
 | Key | Action |
@@ -77,6 +80,8 @@ Works with any character: `"`, `'`, `` ` ``, `(`, `{`, `[`, `<`, tags, etc.
 | `zR` | Open all folds |
 
 ### General (built-in)
+
+Do I really need the splits? I think I can just use the terminal's panes. 
 
 | Key | Action |
 |-----|--------|

@@ -54,6 +54,7 @@ vim.pack.add({
   gh('folke/tokyonight.nvim'),
   gh('echasnovski/mini.pairs'),
   gh('echasnovski/mini.surround'),
+  gh('folke/which-key.nvim'),
 })
 
 --------------------------------------------------------------------------------
@@ -109,6 +110,7 @@ end
 --------------------------------------------------------------------------------
 require('mini.pairs').setup()
 require('mini.surround').setup()
+require('which-key').setup()
 
 --------------------------------------------------------------------------------
 -- Fuzzy finder
